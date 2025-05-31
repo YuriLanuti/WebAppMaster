@@ -37,7 +37,17 @@
       "cep": "21035-070"
     }
   ],
-  "fornecedores": [],
+  "fornecedores": [
+    {
+      "id": "87af",
+      "cnpj": "ksoda",
+      "nome": "dwa",
+      "telefone": "dsa",
+      "cidade": "dwa",
+      "uf": "AP",
+      "cep": "dadads"
+    }
+  ],
   "produtos": [],
   "usuarios": []
 }
