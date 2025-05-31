@@ -37,16 +37,16 @@
       "cep": "21035-070"
     }
   ],
-  
+
   "fornecedores": [
     {
-      "id": "87af",
-      "cnpj": "ksoda",
-      "nome": "dwa",
-      "telefone": "dsa",
-      "cidade": "dwa",
+      "id": "5",
+      "cnpj": "Exemplo de CNPJ",
+      "nome": "Felipe Ferrer",
+      "telefone": "(17)9555-5555",
+      "cidade": "Presidente Bernardes",
       "uf": "AP",
-      "cep": "dadads"
+      "cep": "21035-690"
     }
   ],
   "produtos": [],
