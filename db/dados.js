@@ -37,7 +37,6 @@
       "cep": "21035-070"
     }
   ],
-
   "fornecedores": [
     {
       "id": "5",
@@ -47,6 +46,18 @@
       "cidade": "Presidente Bernardes",
       "uf": "AP",
       "cep": "21035-690"
+    }
+  ],
+  "entregadores": [
+    {
+      "id": "e322",
+      "nome": "Yuri Gabriel Rocha Lanuti",
+      "telefone": "18998168389",
+      "veiculo": "Gol",
+      "placa": "FBR2A23",
+      "cidade": "Presidente Prudente",
+      "uf": "ES",
+      "cep": "1847673"
     }
   ],
   "produtos": [],
