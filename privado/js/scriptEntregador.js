@@ -3,10 +3,6 @@ const urlBase = 'http://localhost:4000/entregadores';
 const formulario = document.getElementById("formCadEntregador");
 let listaDeEntregadores = [];
 
-if (localStorage.getItem("entregadores")) {
-    listaDeEntregadores = JSON.parse(localStorage.getItem("entregadores"));
-}
-
 formulario.onsubmit = manipularSubmissao;
 
 function manipularSubmissao(evento) {

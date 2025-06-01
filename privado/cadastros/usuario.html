@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert alert-secondary text-center mt-5">
+            <h1>Cadastro de Usuário</h1>
+        </div>
+        <form id="formLoginUsuario" action="#" method="POST" class="row g-3 needs-validation border m-1 p-2" novalidate>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+                <div class="invalid-feedback">
+                    Por favor, informe um email válido!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" required />
+                <div class="invalid-feedback">
+                    Por favor, informe a senha!
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+                <a href="../../index.html" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+        <div id="tabela" class="mt-4"></div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/scriptUsuario.js"></script>
+</body>
+
+</html>

@@ -61,5 +61,11 @@
     }
   ],
   "produtos": [],
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": "a58c",
+      "email": "enzonegri@gmail.com",
+      "senha": "enzo"
+    }
+  ]
 }
