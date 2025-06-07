@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal da aplicação</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-     <h1>Bem-vindo a página principal da aplicação.</h1>
-     <h2>Aqui deveria existir um menu.</h2>
-     <p>Para continuar realize o login</p>
-     <a href="/login.html">Login</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Minha Aplicação</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Bem-vindo à página principal da aplicação</h1>
+        <p class="lead mb-4">Para continuar, realize o login.</p>
+        <a href="/login.html" class="btn btn-primary btn-lg">Login</a>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -57,7 +57,7 @@ app.post("/login", (requisicao, resposta) => {
                                 <div class="card my-5">
                                     <form class="card-body cardbody-color p-lg-5" action="/login" method="post">
                                         <div class="text-center">
-                                            <img src="/imagens/login-avatar.webp"
+                                            <img src="/imagens/loginCachorro.png"
                                                  class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
                                                  width="200px" alt="profile">
                                         </div>
@@ -70,8 +70,9 @@ app.post("/login", (requisicao, resposta) => {
                                             <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button>
+                                            <button type="submit" class="btn btn-primary">Login</button>
                                         </div>
+                                        <br>
                                         <div class="alert alert-danger">Usuário ou senha incorretos!</div>
                                     </form>
                                 </div>
