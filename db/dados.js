@@ -35,6 +35,15 @@
       "cidade": "Três Lagoas",
       "uf": "MS",
       "cep": "21035-070"
+    },
+    {
+      "id": "2596",
+      "cpf": "2772737421",
+      "nome": "eduRD",
+      "telefone": "233455",
+      "cidade": "vbgggb",
+      "uf": "GO",
+      "cep": "fdgg"
     }
   ],
   "fornecedores": [
@@ -58,15 +67,61 @@
       "cidade": "Presidente Prudente",
       "uf": "ES",
       "cep": "1847673"
+    },
+    {
+      "id": "bd6a",
+      "nome": "eduRD",
+      "telefone": "233455",
+      "veiculo": "celta",
+      "placa": "rsgrggr",
+      "cidade": "vbgggb",
+      "uf": "PR",
+      "cep": "fdgg"
+    },
+    {
+      "id": "db1c",
+      "nome": "eduRDdsfs",
+      "telefone": "2323424",
+      "veiculo": "celta",
+      "placa": "fdssdf",
+      "cidade": "sdfsdrg",
+      "uf": "MG",
+      "cep": "2rq2rr33r"
     }
   ],
   "produtos": [],
-  
   "usuarios": [
     {
       "id": "a58c",
       "email": "enzonegri@gmail.com",
       "senha": "enzo"
+    },
+    {
+      "id": "974f",
+      "email": "dudacalto@hotmail.com",
+      "senha": "vdsdsdffddgs"
+    }
+  ],
+  "categoria": [
+    {
+      "id": "f849",
+      "nomeCategoria": "Limpeza",
+      "desc": "banheiro"
+    },
+    {
+      "id": "1572",
+      "nomeCategoria": "Limpeza",
+      "desc": "banheiro"
+    },
+    {
+      "id": "6a8d",
+      "nomeCategoria": "Limpeza",
+      "desc": "banheiro"
+    },
+    {
+      "id": "cd8b",
+      "nomeCategoria": "Limpeza",
+      "desc": "banheiro"
     }
   ]
 }
