@@ -89,7 +89,7 @@ function mostrarTabelaProdutos(){
             linha.id=listaDeProdutos[i].id;
             linha.innerHTML=`
                 <td>${listaDeProdutos[i].nomeProduto}</td>
-                <td>${listaDeProdutos[i].preco}</td>
+                <td>$ ${listaDeProdutos[i].preco}</td>
                 <td><button type="button" class="btn btn-danger" onclick="excluirProduto('${listaDeProdutos[i].id}')"><i class="bi bi-trash"></i>Excluir</button></td>
             `;
             corpo.appendChild(linha);

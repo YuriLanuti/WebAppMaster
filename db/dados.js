@@ -89,7 +89,18 @@
       "cep": "2rq2rr33r"
     }
   ],
-  "produtos": [],
+  "produtos": [
+    {
+      "id": "3dcc",
+      "nomeProduto": "Guaraná",
+      "preco": "5"
+    },
+    {
+      "id": "3fcd",
+      "nomeProduto": "Strogonoff",
+      "preco": "25"
+    }
+  ],
   "usuarios": [
     {
       "id": "a58c",
@@ -104,14 +115,19 @@
   ],
   "categoria": [
     {
-      "id": "f686",
-      "nomeCategoria": "Bebidas",
-      "desc": "coca"
+      "id": "47c1",
+      "nomeCategoria": "Comida",
+      "desc": "Aqui há uma descrição"
     },
     {
-      "id": "6e44",
-      "nomeCategoria": "Comidas",
-      "desc": "arroz"
+      "id": "debe",
+      "nomeCategoria": "Eletrônico",
+      "desc": "Aqui há uma descrição"
+    },
+    {
+      "id": "3bbc",
+      "nomeCategoria": "Bebida",
+      "desc": "Aqui há uma descrição"
     }
   ]
 }
