@@ -1,4 +1,3 @@
-
 const urlBase = 'http://localhost:4000/produtos';
 
 const formulario = document.getElementById("formCadProdutos");
@@ -10,9 +9,9 @@ if (localStorage.getItem("categoria")){
     listaDeCategoria = JSON.parse(localStorage.getItem("categoria"));
 }
 
-if (localStorage.getItem("produtos")){
+/*if (localStorage.getItem("produtos")){
     listaDeProdutos = JSON.parse(localStorage.getItem("produtos"));
-}
+}*/
 
 formulario.onsubmit=manipularSubmissao;
 
@@ -34,19 +33,34 @@ function manipularSubmissao(evento){
 
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const categoria = listaDeCategoria;
-    console.log(categoria,"categoria")
-    console.log(listaDeCategoria)
-    const select = document.getElementById("categoria");
-    select.innerHTML = `<option selected disabled value="">Escolha uma categoria</option>`;
-    categoria.forEach(categoria => {
-        const option = document.createElement("option");
-        option.value = categoria.id;
-        option.textContent = categoria.nomeCategoria;
-        select.appendChild(option);
+
+function VerCategorias() {
+    const selectCategorias = document.getElementById("categorias");
+
+    if (!selectCategorias) {
+    console.error("Elemento <select id='categorias'> não encontrado.");
+    return;
+    }
+
+    fetch('http://localhost:4000/categoria', {
+    method: "GET",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    })
+    .then((res) => res.json())
+    .then((res) => {
+    let categoriaHTML = `<option disabled selected>Selecione uma categoria</option>`;
+    res.forEach((categoria) => {
+        categoriaHTML += `<option value="${categoria.id}">${categoria.nomeCategoria}</option>`;
     });
-});
+    selectCategorias.innerHTML = categoriaHTML;
+    })
+    .catch((erro) => {
+    console.error(erro);
+    alert("Erro ao tentar recuperar categorias do servidor!");
+    });
+}
 
 function mostrarTabelaProdutos(){
     
@@ -67,8 +81,8 @@ function mostrarTabelaProdutos(){
                 <th>Preco</th>
                 <th>Categoria</th>
                 
-            </tr>
-        `;
+            </tr>`
+        ;
         tabela.appendChild(cabecalho);
         for (let i=0; i < listaDeProdutos.length; i++){
             const linha = document.createElement('tr');
@@ -150,6 +164,9 @@ function cadastrarProduto(produto){  //Enviar dados para o servidor
 
 }
 
+window.onload = function () {
+  VerCategorias();
+}
 
 
 obterDadosProduto();

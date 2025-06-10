@@ -104,29 +104,39 @@ function obterDadosCategoria(){
 }
 
 
-function cadastrarCategoria(categoria){  //Enviar dados para o servidor
+function cadastrarCategoria(categoria) {
+    // Verificação se o nome da categoria já existe (case insensitive)
+    const existe = listaDeCategoria.some(cat =>
+        cat.nomeCategoria.trim().toLowerCase() === categoria.nomeCategoria.trim().toLowerCase()
+    );
 
+    if (existe) {
+        alert("Categoria já cadastrada!");
+        return;
+    }
+
+    // Se não existe, faz o cadastro
     fetch(urlBase, {
-       "method":"POST",
-       "headers": {
-          "Content-Type":"application/json",
-       },
-       "body": JSON.stringify(categoria)
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(categoria)
     })
-    .then((resposta)=>{
-        if(resposta.ok){
+    .then((resposta) => {
+        if (resposta.ok) {
             return resposta.json();
         }
     })
-    .then((dados) =>{
-        alert(`Categoria incluído com sucesso! ID:${dados.id}`);
-        listaDeCategoria.push(categoria);
+    .then((dados) => {
+        alert(`Categoria incluída com sucesso! ID: ${dados.id}`);
+        listaDeCategoria.push(dados); // melhor usar o que veio do servidor
         mostrarTabelaCategoria();
     })
-    .catch((erro)=>{
-        alert("Erro ao cadastrar a Categoria:" + erro);
+    .catch((erro) => {
+        alert("Erro ao cadastrar a Categoria: " + erro);
     });
-
 }
+
 
 obterDadosCategoria();

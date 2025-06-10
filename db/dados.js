@@ -104,24 +104,14 @@
   ],
   "categoria": [
     {
-      "id": "f849",
-      "nomeCategoria": "Limpeza",
-      "desc": "banheiro"
+      "id": "f686",
+      "nomeCategoria": "Bebidas",
+      "desc": "coca"
     },
     {
-      "id": "1572",
-      "nomeCategoria": "Limpeza",
-      "desc": "banheiro"
-    },
-    {
-      "id": "6a8d",
-      "nomeCategoria": "Limpeza",
-      "desc": "banheiro"
-    },
-    {
-      "id": "cd8b",
-      "nomeCategoria": "Limpeza",
-      "desc": "banheiro"
+      "id": "6e44",
+      "nomeCategoria": "Comidas",
+      "desc": "arroz"
     }
   ]
 }
