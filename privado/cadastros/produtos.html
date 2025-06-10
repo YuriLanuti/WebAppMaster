@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+</head>
+
+<body> 
+    <div class="container">
+        <div class="alert alert-secondary text-center mt-5">
+            <h1>Cadastro de Produtos</h1>
+        </div>
+        <form id="formCadProdutos" action="#" method="POST" class="row g-3 needs-validation border m-1 p-2" novalidate>
+            <div class="col-md-4">
+                <label for="nomeProduto" class="form-label">Nome-Produto</label>
+                <input type="text" class="form-control" id="nomeProduto" required>
+                <div class="invalid-feedback">
+                    Por favor, informe o nome do Produto!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="preco" class="form-label">Preco</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">💲</span>
+                    <input type="text" class="form-control" id="preco" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Por favor, informe o preco.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="categorias" class="form-label">Categoria</label>
+                <select class="form-select" id="categorias" required>
+                    <option selected disabled value="">Escolha uma categoria</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor, selecione uma categoria.
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+                <a href="../../index.html" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+        <div id="tabela">
+            
+        </div>
+    </div>
+
+</body>
+<script src='/js/bootstrap.bundle.min.js'></script>
+<script src="/js/scriptProduto.js"></script>
+
+</html>
