@@ -69,24 +69,14 @@
       "cep": "1847673"
     },
     {
-      "id": "bd6a",
-      "nome": "eduRD",
-      "telefone": "233455",
-      "veiculo": "celta",
-      "placa": "rsgrggr",
-      "cidade": "vbgggb",
-      "uf": "PR",
-      "cep": "fdgg"
-    },
-    {
-      "id": "db1c",
-      "nome": "eduRDdsfs",
-      "telefone": "2323424",
-      "veiculo": "celta",
-      "placa": "fdssdf",
-      "cidade": "sdfsdrg",
-      "uf": "MG",
-      "cep": "2rq2rr33r"
+      "id": "368a",
+      "nome": "Cinho",
+      "telefone": "18996482414",
+      "veiculo": "Astra ",
+      "placa": "ERJ8N42",
+      "cidade": "Osvaldo Cruz",
+      "uf": "SP",
+      "cep": "19306150"
     }
   ],
   "produtos": [
