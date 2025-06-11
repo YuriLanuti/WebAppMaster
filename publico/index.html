@@ -26,8 +26,42 @@
     <div class="container text-center mt-5">
         <h1 class="mb-4">Bem-vindo à página principal da aplicação</h1>
         <p class="lead mb-4">Para continuar, realize o login.</p>
-        <a href="/login.html" class="btn btn-primary btn-lg">Login</a>
+        <a href="/login.html" class="btn btn-primary btn-lg mb-4">Login</a>
+        <div id="produtos-container" class="row justify-content-center">
+        </div>
     </div>
+    <script>
+        function carregarProdutos(){
+            fetch('https://fakestoreapi.com/products',{
+                method:"GET"
+            }).then((resposta) =>{
+                if (resposta.ok){
+                    return resposta.json();
+                }
+            }).then((listaDeProdutos) => {
+                const divVitrine = document.getElementById("produtos-container");
+                for (const produto of listaDeProdutos){
+                    let cardWrapper = document.createElement('div');
+                    cardWrapper.className = "col-md-3 mb-4";
+                    cardWrapper.innerHTML=`
+                    <div class="card h-100">
+                        <img width="150px" height="250px" src="${produto.image}" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${produto.title}</h5>
+                            <p class="card-text">R$ ${produto.price}</p>
+                            <a href="#" class="btn btn-primary mt-auto">Comprar</a>
+                        </div>
+                    </div>
+                    `;
+                    divVitrine.appendChild(cardWrapper);
+                }
+            }).catch((erro)=>{
+                alert("Não foi possível carregar os produtos para a vitrine:" + erro);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', carregarProdutos);
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

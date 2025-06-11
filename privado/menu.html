@@ -38,15 +38,46 @@
                 <a class="nav-link" href="/logout">Sair</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
           </div>
         </div>
       </nav>
+      <div class="container mt-4">
+        <div id="produtos-container" class="row">
+        </div>
+      </div>
+    <script>
+        function carregarProdutos(){
+            fetch('https://fakestoreapi.com/products',{
+                method:"GET"
+            }).then((resposta) =>{
+                if (resposta.ok){
+                    return resposta.json();
+                }
+            }).then((listaDeProdutos) => {
+                const divVitrine = document.getElementById("produtos-container");
+                for (const produto of listaDeProdutos){
+                    let cardWrapper = document.createElement('div');
+                    cardWrapper.className = "col-md-3 mb-4";
+                    cardWrapper.innerHTML=`
+                    <div class="card h-100">
+                        <img width="150px" height="250px" src="${produto.image}" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${produto.title}</h5>
+                            <p class="card-text">R$ ${produto.price}</p>
+                            <a href="#" class="btn btn-primary mt-auto">Comprar</a>
+                        </div>
+                    </div>
+                    `;
+                    divVitrine.appendChild(cardWrapper);
+                }
+            }).catch((erro)=>{
+                alert("Não foi possível carregar os produtos para a vitrine:" + erro);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', carregarProdutos);
+    </script>
 </body>
 <script src='/js/bootstrap.bundle.min.js'></script>
+<script src='/js/menu.js'></script>
 </html>
-
-

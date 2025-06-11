@@ -35,15 +35,6 @@
       "cidade": "Três Lagoas",
       "uf": "MS",
       "cep": "21035-070"
-    },
-    {
-      "id": "2596",
-      "cpf": "2772737421",
-      "nome": "eduRD",
-      "telefone": "233455",
-      "cidade": "vbgggb",
-      "uf": "GO",
-      "cep": "fdgg"
     }
   ],
   "fornecedores": [
@@ -89,6 +80,11 @@
       "id": "3fcd",
       "nomeProduto": "Strogonoff",
       "preco": "25"
+    },
+    {
+      "id": "d05f",
+      "nomeProduto": "Pizza",
+      "preco": "50"
     }
   ],
   "usuarios": [
