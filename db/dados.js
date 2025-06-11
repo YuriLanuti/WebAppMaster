@@ -72,19 +72,22 @@
   ],
   "produtos": [
     {
-      "id": "3dcc",
-      "nomeProduto": "Guaraná",
-      "preco": "5"
-    },
-    {
-      "id": "3fcd",
-      "nomeProduto": "Strogonoff",
-      "preco": "25"
-    },
-    {
-      "id": "d05f",
+      "id": "a120",
       "nomeProduto": "Pizza",
-      "preco": "50"
+      "preco": "50,00",
+      "categoria": "Comida"
+    },
+    {
+      "id": "8f66",
+      "nomeProduto": "Camiseta",
+      "preco": "70,00",
+      "categoria": "Roupa"
+    },
+    {
+      "id": "1d9e",
+      "nomeProduto": "Celular",
+      "preco": "5.000,00",
+      "categoria": "Eletrônico"
     }
   ],
   "usuarios": [
@@ -113,6 +116,11 @@
     {
       "id": "3bbc",
       "nomeCategoria": "Bebida",
+      "desc": "Aqui há uma descrição"
+    },
+    {
+      "id": "aad8",
+      "nomeCategoria": "Roupa",
       "desc": "Aqui há uma descrição"
     }
   ]

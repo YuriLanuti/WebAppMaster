@@ -19,7 +19,10 @@ function manipularSubmissao(evento){
     if (formulario.checkValidity()){
         const nomeProduto = document.getElementById("nomeProduto").value;
         const preco = document.getElementById("preco").value;
-        const produtos = {nomeProduto,preco};
+        const categoriaSelect = document.getElementById("categorias");
+        const categoriaIndex = categoriaSelect.selectedIndex;
+        const categoria = categoriaSelect.options[categoriaIndex].text;
+        const produtos = {nomeProduto, preco, categoria};
         evento.preventDefault();
         cadastrarProduto(produtos)
         formulario.reset();
@@ -80,7 +83,6 @@ function mostrarTabelaProdutos(){
                 <th>Nome</th>
                 <th>Preco</th>
                 <th>Categoria</th>
-                
             </tr>`
         ;
         tabela.appendChild(cabecalho);
@@ -90,6 +92,7 @@ function mostrarTabelaProdutos(){
             linha.innerHTML=`
                 <td>${listaDeProdutos[i].nomeProduto}</td>
                 <td>R$ ${listaDeProdutos[i].preco}</td>
+                <td>${listaDeProdutos[i].categoria}</td>
                 <td><button type="button" class="btn btn-danger" onclick="excluirProduto('${listaDeProdutos[i].id}')"><i class="bi bi-trash"></i>Excluir</button></td>
             `;
             corpo.appendChild(linha);
@@ -155,7 +158,9 @@ function cadastrarProduto(produto){  //Enviar dados para o servidor
     })
     .then((dados) =>{
         alert(`Produto incluído com sucesso! ID:${dados.id}`);
-        listaDeProdutos.push(produto);
+        // Add the returned product with id and category to the list
+        const produtoComCategoria = {...produto, id: dados.id};
+        listaDeProdutos.push(produtoComCategoria);
         mostrarTabelaProdutos();
     })
     .catch((erro)=>{
