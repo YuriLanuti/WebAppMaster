@@ -4,11 +4,6 @@ const urlBase = 'http://localhost:4000/categoria';
 const formulario = document.getElementById("formCadCategoria");
 let listaDeCategoria = [];
 
-if (localStorage.getItem("categoria")){
-    //recuperando do armazenamento local a lista 
-    listaDeCategoria = JSON.parse(localStorage.getItem("categoria"));
-}
-
 formulario.onsubmit=manipularSubmissao;
 
 function manipularSubmissao(evento){
@@ -105,7 +100,7 @@ function obterDadosCategoria(){
 
 
 function cadastrarCategoria(categoria) {
-    // Verificação se o nome da categoria já existe (case insensitive)
+    // Verificação se o nome da categoria já existe 
     const existe = listaDeCategoria.some(cat =>
         cat.nomeCategoria.trim().toLowerCase() === categoria.nomeCategoria.trim().toLowerCase()
     );
@@ -130,7 +125,7 @@ function cadastrarCategoria(categoria) {
     })
     .then((dados) => {
         alert(`Categoria incluída com sucesso! ID: ${dados.id}`);
-        listaDeCategoria.push(dados); // melhor usar o que veio do servidor
+        listaDeCategoria.push(dados); 
         mostrarTabelaCategoria();
     })
     .catch((erro) => {

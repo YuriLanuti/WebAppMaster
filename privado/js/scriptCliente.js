@@ -4,11 +4,6 @@ const urlBase = 'http://localhost:4000/clientes';
 const formulario = document.getElementById("formCadCliente");
 let listaDeClientes = [];
 
-if (localStorage.getItem("clientes")){
-    //recuperando do armazenamento local a lista de clientes
-    listaDeClientes = JSON.parse(localStorage.getItem("clientes"));
-}
-
 formulario.onsubmit=manipularSubmissao;
 
 function manipularSubmissao(evento){
@@ -20,8 +15,6 @@ function manipularSubmissao(evento){
         const uf = document.getElementById("uf").value;
         const cep = document.getElementById("cep").value;
         const cliente = {cpf,nome,telefone,cidade,uf,cep};
-        //listaDeClientes.push(cliente);
-        //localStorage.setItem("clientes", JSON.stringify(listaDeClientes));
         cadastrarCliente(cliente);//enviar requisição p/ servidor
         formulario.reset();
         mostrarTabelaClientes();
@@ -91,7 +84,6 @@ function excluirCliente(id){
             listaDeClientes = listaDeClientes.filter((cliente) => { 
                 return cliente.id !== id;
             });
-            //localStorage.setItem("clientes", JSON.stringify(listaDeClientes));
             document.getElementById(id)?.remove(); //excluir a linha da tabela
         }).catch((erro) => {
             alert("Não foi possível excluir o cliente: " + erro);

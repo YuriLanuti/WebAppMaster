@@ -37,6 +37,7 @@
       "cep": "21035-070"
     }
   ],
+
   "fornecedores": [
     {
       "id": "5",
@@ -48,6 +49,7 @@
       "cep": "21035-690"
     }
   ],
+
   "entregadores": [
     {
       "id": "e322",
@@ -70,6 +72,7 @@
       "cep": "19306150"
     }
   ],
+
   "produtos": [
     {
       "id": "a120",
@@ -90,6 +93,7 @@
       "categoria": "Eletrônico"
     }
   ],
+
   "usuarios": [
     {
       "id": "a58c",
@@ -102,6 +106,7 @@
       "senha": "vdsdsdffddgs"
     }
   ],
+
   "categoria": [
     {
       "id": "47c1",
@@ -124,4 +129,5 @@
       "desc": "Aqui há uma descrição"
     }
   ]
+  
 }

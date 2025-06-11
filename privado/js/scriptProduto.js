@@ -4,15 +4,6 @@ const formulario = document.getElementById("formCadProdutos");
 let listaDeProdutos = [];
 let listaDeCategoria = [];
 
-if (localStorage.getItem("categoria")){
-    //recuperando do armazenamento local a lista de clientes
-    listaDeCategoria = JSON.parse(localStorage.getItem("categoria"));
-}
-
-/*if (localStorage.getItem("produtos")){
-    listaDeProdutos = JSON.parse(localStorage.getItem("produtos"));
-}*/
-
 formulario.onsubmit=manipularSubmissao;
 
 function manipularSubmissao(evento){
@@ -158,7 +149,6 @@ function cadastrarProduto(produto){  //Enviar dados para o servidor
     })
     .then((dados) =>{
         alert(`Produto incluído com sucesso! ID:${dados.id}`);
-        // Add the returned product with id and category to the list
         const produtoComCategoria = {...produto, id: dados.id};
         listaDeProdutos.push(produtoComCategoria);
         mostrarTabelaProdutos();

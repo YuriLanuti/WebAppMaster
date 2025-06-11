@@ -3,11 +3,6 @@ const urlBase = 'http://localhost:4000/fornecedores';
 const formulario = document.getElementById("formCadFornecedor");
 let listaDeFornecedores = [];
 
-if (localStorage.getItem("fornecedores")){
-    // recuperando do armazenamento local a lista de fornecedores
-    listaDeFornecedores = JSON.parse(localStorage.getItem("fornecedores"));
-}
-
 formulario.onsubmit = manipularSubmissao;
 
 function manipularSubmissao(evento){
